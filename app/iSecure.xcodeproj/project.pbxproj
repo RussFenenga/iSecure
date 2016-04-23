@@ -280,6 +280,12 @@
 					};
 					89F97E241CCB3DFE00A2865C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HY5NYNN4D3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
