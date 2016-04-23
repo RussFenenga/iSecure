@@ -1,0 +1,45 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Alamofire (3.3.1)
+  - EstimoteSDK (4.1.0)
+  - Firebase (2.5.1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - Alamofire (~> 3.3)
+  - EstimoteSDK
+  - Firebase (>= 2.5.1)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  EstimoteSDK: d4ae7f9b7fafd26101d002fec786b6f674537357
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0

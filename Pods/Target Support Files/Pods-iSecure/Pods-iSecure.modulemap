@@ -1,0 +1,6 @@
+framework module Pods_iSecure {
+  umbrella header "Pods-iSecure-umbrella.h"
+
+  export *
+  module * { export * }
+}
