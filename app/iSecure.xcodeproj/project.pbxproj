@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		8919D0C01CCB466A00BC86F1 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919D0BF1CCB466A00BC86F1 /* FirebaseReference.swift */; };
 		899A2D041CCB5ABD0031371B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D031CCB5ABD0031371B /* HomeViewController.swift */; };
+		899A2D0B1CCB68580031371B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899A2D091CCB68580031371B /* Interface.storyboard */; };
+		899A2D0D1CCB68580031371B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899A2D0C1CCB68580031371B /* Assets.xcassets */; };
+		899A2D141CCB68580031371B /* iSecureWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 899A2D131CCB68580031371B /* iSecureWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		899A2D1B1CCB68580031371B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D1A1CCB68580031371B /* InterfaceController.swift */; };
+		899A2D1D1CCB68590031371B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D1C1CCB68580031371B /* ExtensionDelegate.swift */; };
+		899A2D1F1CCB68590031371B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D1E1CCB68590031371B /* NotificationController.swift */; };
+		899A2D211CCB68590031371B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D201CCB68590031371B /* GlanceController.swift */; };
+		899A2D231CCB68590031371B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899A2D221CCB68590031371B /* Assets.xcassets */; };
+		899A2D271CCB68590031371B /* iSecureWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 899A2D071CCB68580031371B /* iSecureWatch.app */; };
 		89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E281CCB3DFE00A2865C /* AppDelegate.swift */; };
 		89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */; };
 		89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */; };
@@ -18,11 +27,65 @@
 		903D1C3E0010FE504B40BAE2 /* Pods_iSecure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F362DE990AACCE17E863910 /* Pods_iSecure.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		899A2D151CCB68580031371B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89F97E1D1CCB3DFE00A2865C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 899A2D121CCB68580031371B;
+			remoteInfo = "iSecureWatch Extension";
+		};
+		899A2D251CCB68590031371B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89F97E1D1CCB3DFE00A2865C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 899A2D061CCB68580031371B;
+			remoteInfo = iSecureWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		899A2D2D1CCB68590031371B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				899A2D141CCB68580031371B /* iSecureWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A2D2F1CCB68590031371B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				899A2D271CCB68590031371B /* iSecureWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2A212D72407B5FBEEC180BB7 /* Pods-iSecure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSecure.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSecure/Pods-iSecure.release.xcconfig"; sourceTree = "<group>"; };
 		4F362DE990AACCE17E863910 /* Pods_iSecure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSecure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8919D0BF1CCB466A00BC86F1 /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		899A2D031CCB5ABD0031371B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		899A2D071CCB68580031371B /* iSecureWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSecureWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		899A2D0A1CCB68580031371B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		899A2D0C1CCB68580031371B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		899A2D0E1CCB68580031371B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899A2D131CCB68580031371B /* iSecureWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iSecureWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		899A2D191CCB68580031371B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		899A2D1A1CCB68580031371B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		899A2D1C1CCB68580031371B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		899A2D1E1CCB68590031371B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		899A2D201CCB68590031371B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		899A2D221CCB68590031371B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		899A2D241CCB68590031371B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89F97E251CCB3DFE00A2865C /* iSecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F97E281CCB3DFE00A2865C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlirImageViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +98,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		899A2D101CCB68580031371B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89F97E221CCB3DFE00A2865C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +125,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		899A2D081CCB68580031371B /* iSecureWatch */ = {
+			isa = PBXGroup;
+			children = (
+				899A2D091CCB68580031371B /* Interface.storyboard */,
+				899A2D0C1CCB68580031371B /* Assets.xcassets */,
+				899A2D0E1CCB68580031371B /* Info.plist */,
+			);
+			path = iSecureWatch;
+			sourceTree = "<group>";
+		};
+		899A2D171CCB68580031371B /* iSecureWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				899A2D1A1CCB68580031371B /* InterfaceController.swift */,
+				899A2D1C1CCB68580031371B /* ExtensionDelegate.swift */,
+				899A2D1E1CCB68590031371B /* NotificationController.swift */,
+				899A2D201CCB68590031371B /* GlanceController.swift */,
+				899A2D221CCB68590031371B /* Assets.xcassets */,
+				899A2D241CCB68590031371B /* Info.plist */,
+				899A2D181CCB68580031371B /* Supporting Files */,
+			);
+			path = "iSecureWatch Extension";
+			sourceTree = "<group>";
+		};
+		899A2D181CCB68580031371B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				899A2D191CCB68580031371B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		89F97E1C1CCB3DFE00A2865C = {
 			isa = PBXGroup;
 			children = (
 				89F97E271CCB3DFE00A2865C /* iSecure */,
+				899A2D081CCB68580031371B /* iSecureWatch */,
+				899A2D171CCB68580031371B /* iSecureWatch Extension */,
 				89F97E261CCB3DFE00A2865C /* Products */,
 				4F0A20373F03FA8FB1CDBF83 /* Pods */,
 				C6324F28B1F48CB7B826231C /* Frameworks */,
@@ -69,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				89F97E251CCB3DFE00A2865C /* iSecure.app */,
+				899A2D071CCB68580031371B /* iSecureWatch.app */,
+				899A2D131CCB68580031371B /* iSecureWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +206,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		899A2D061CCB68580031371B /* iSecureWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899A2D2E1CCB68590031371B /* Build configuration list for PBXNativeTarget "iSecureWatch" */;
+			buildPhases = (
+				899A2D051CCB68580031371B /* Resources */,
+				899A2D2D1CCB68590031371B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				899A2D161CCB68580031371B /* PBXTargetDependency */,
+			);
+			name = iSecureWatch;
+			productName = iSecureWatch;
+			productReference = 899A2D071CCB68580031371B /* iSecureWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		899A2D121CCB68580031371B /* iSecureWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899A2D2C1CCB68590031371B /* Build configuration list for PBXNativeTarget "iSecureWatch Extension" */;
+			buildPhases = (
+				899A2D0F1CCB68580031371B /* Sources */,
+				899A2D101CCB68580031371B /* Frameworks */,
+				899A2D111CCB68580031371B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iSecureWatch Extension";
+			productName = "iSecureWatch Extension";
+			productReference = 899A2D131CCB68580031371B /* iSecureWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		89F97E241CCB3DFE00A2865C /* iSecure */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89F97E391CCB3DFE00A2865C /* Build configuration list for PBXNativeTarget "iSecure" */;
@@ -110,10 +250,12 @@
 				89F97E231CCB3DFE00A2865C /* Resources */,
 				EB5830A4E0E4984B4864E5A6 /* Embed Pods Frameworks */,
 				9EACCCF6ABACCAE37FB27645 /* Copy Pods Resources */,
+				899A2D2F1CCB68590031371B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				899A2D261CCB68590031371B /* PBXTargetDependency */,
 			);
 			name = iSecure;
 			productName = iSecure;
@@ -130,6 +272,12 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = com.TeamWon;
 				TargetAttributes = {
+					899A2D061CCB68580031371B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					899A2D121CCB68580031371B = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					89F97E241CCB3DFE00A2865C = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -149,11 +297,30 @@
 			projectRoot = "";
 			targets = (
 				89F97E241CCB3DFE00A2865C /* iSecure */,
+				899A2D061CCB68580031371B /* iSecureWatch */,
+				899A2D121CCB68580031371B /* iSecureWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		899A2D051CCB68580031371B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A2D0D1CCB68580031371B /* Assets.xcassets in Resources */,
+				899A2D0B1CCB68580031371B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		899A2D111CCB68580031371B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A2D231CCB68590031371B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89F97E231CCB3DFE00A2865C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +382,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		899A2D0F1CCB68580031371B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899A2D1F1CCB68590031371B /* NotificationController.swift in Sources */,
+				899A2D1D1CCB68590031371B /* ExtensionDelegate.swift in Sources */,
+				899A2D1B1CCB68580031371B /* InterfaceController.swift in Sources */,
+				899A2D211CCB68590031371B /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89F97E211CCB3DFE00A2865C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,7 +407,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		899A2D161CCB68580031371B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 899A2D121CCB68580031371B /* iSecureWatch Extension */;
+			targetProxy = 899A2D151CCB68580031371B /* PBXContainerItemProxy */;
+		};
+		899A2D261CCB68590031371B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 899A2D061CCB68580031371B /* iSecureWatch */;
+			targetProxy = 899A2D251CCB68590031371B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		899A2D091CCB68580031371B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				899A2D0A1CCB68580031371B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		89F97E2E1CCB3DFE00A2865C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -249,6 +448,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		899A2D281CCB68590031371B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = iSecureWatch_Extension;
+				INFOPLIST_FILE = iSecureWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TeamWon.iSecure.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		899A2D291CCB68590031371B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = iSecureWatch_Extension;
+				INFOPLIST_FILE = iSecureWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TeamWon.iSecure.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		899A2D2A1CCB68590031371B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iSecureWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TeamWon.iSecure.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		899A2D2B1CCB68590031371B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "iSecureWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TeamWon.iSecure.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		89F97E371CCB3DFE00A2865C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,6 +618,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		899A2D2C1CCB68590031371B /* Build configuration list for PBXNativeTarget "iSecureWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899A2D2A1CCB68590031371B /* Debug */,
+				899A2D2B1CCB68590031371B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		899A2D2E1CCB68590031371B /* Build configuration list for PBXNativeTarget "iSecureWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899A2D281CCB68590031371B /* Debug */,
+				899A2D291CCB68590031371B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		89F97E201CCB3DFE00A2865C /* Build configuration list for PBXProject "iSecure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

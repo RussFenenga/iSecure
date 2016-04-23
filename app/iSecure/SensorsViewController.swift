@@ -39,7 +39,7 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        //we are going to want to transition to a view that gives a nice view of the data for whatever thing was clicked.
         
     }
 
