@@ -8,7 +8,16 @@
 
 import UIKit
 
-class SensorsViewController: UIViewController {
+class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var sensorsTableView: UITableView!
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.sensorsTableView.delegate=self
+        self.sensorsTableView.dataSource=self
+        self.sensorsTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +27,19 @@ class SensorsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = self.sensorsTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        
+        return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 
 
