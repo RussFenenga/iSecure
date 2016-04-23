@@ -20,6 +20,7 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     override func viewDidLoad() {
+        self.navigationItem.title = "Sensors";
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -30,19 +31,57 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 4
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.sensorsTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        cell.textLabel?.text = "Tempature"
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "Tempature"
+            break
+        case 1:
+            cell.textLabel?.text = "Door System"
+            break
+        case 2:
+            cell.textLabel?.text = "Light Intensity"
+            break
+        case 3:
+            cell.textLabel?.text = "Lights"
+        default:
+            break
+        }
+        
         
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //we are going to want to transition to a view that gives a nice view of the data for whatever thing was clicked.
-        
+        switch indexPath.row {
+        case 0:
+            self.performSegueWithIdentifier("didSelectTemp", sender: UITableViewCell())
+            break
+        case 1:
+            self.performSegueWithIdentifier("didSelectDoor", sender: UITableViewCell())
+            break
+        case 2:
+            self.performSegueWithIdentifier("didSelectLight", sender: UITableViewCell())
+            break
+        case 3:
+            self.performSegueWithIdentifier("didSelectRGB", sender: UITableViewCell())
+            break
+        default:
+            break
+        }
+        self.sensorsTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "didSelectRow" {
+//            let nextViewController = segue.destinationViewController as? SensorDetailViewController
+//            if let indexPath = self.sensorsTableView.indexPathForSelectedRow {
+//                let selectedSurfSpot = surfSpotData[indexPath.row]
+//                nextViewController!.surfSpot = selectedSurfSpot as? SurfSpot
+//            }
+//        }
+    }
 }
 

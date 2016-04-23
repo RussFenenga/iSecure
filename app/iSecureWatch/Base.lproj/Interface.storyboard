@@ -8,7 +8,15 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iSecureWatch" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iSecureWatch" customModuleProvider="target">
+                    <items>
+                        <label width="134" height="36.5" alignment="left" text="Label" textAlignment="center" id="Ke6-Rd-iWv"/>
+                        <button width="1" alignment="left" title="Alarm" id="ge4-pi-h2c"/>
+                    </items>
+                    <connections>
+                        <outlet property="doorStatusLabel" destination="Ke6-Rd-iWv" id="cZ8-7T-MAe"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>

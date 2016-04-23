@@ -18,6 +18,10 @@
 		899A2D211CCB68590031371B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D201CCB68590031371B /* GlanceController.swift */; };
 		899A2D231CCB68590031371B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899A2D221CCB68590031371B /* Assets.xcassets */; };
 		899A2D271CCB68590031371B /* iSecureWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 899A2D071CCB68580031371B /* iSecureWatch.app */; };
+		899A2D311CCB7F9C0031371B /* TempDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D301CCB7F9C0031371B /* TempDetailViewController.swift */; };
+		899A2D331CCBB3B40031371B /* DoorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D321CCBB3B30031371B /* DoorDetailViewController.swift */; };
+		899A2D351CCBBB880031371B /* LightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D341CCBBB880031371B /* LightDetailViewController.swift */; };
+		899A2D371CCBD00B0031371B /* RGBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */; };
 		89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E281CCB3DFE00A2865C /* AppDelegate.swift */; };
 		89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */; };
 		89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */; };
@@ -86,6 +90,10 @@
 		899A2D201CCB68590031371B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		899A2D221CCB68590031371B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		899A2D241CCB68590031371B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899A2D301CCB7F9C0031371B /* TempDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempDetailViewController.swift; sourceTree = "<group>"; };
+		899A2D321CCBB3B30031371B /* DoorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorDetailViewController.swift; sourceTree = "<group>"; };
+		899A2D341CCBBB880031371B /* LightDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightDetailViewController.swift; sourceTree = "<group>"; };
+		899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBDetailViewController.swift; sourceTree = "<group>"; };
 		89F97E251CCB3DFE00A2865C /* iSecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F97E281CCB3DFE00A2865C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlirImageViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +194,10 @@
 				89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */,
 				89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */,
 				89F97E2E1CCB3DFE00A2865C /* Main.storyboard */,
+				899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */,
+				899A2D341CCBBB880031371B /* LightDetailViewController.swift */,
+				899A2D321CCBB3B30031371B /* DoorDetailViewController.swift */,
+				899A2D301CCB7F9C0031371B /* TempDetailViewController.swift */,
 				899A2D031CCB5ABD0031371B /* HomeViewController.swift */,
 				8919D0BF1CCB466A00BC86F1 /* FirebaseReference.swift */,
 				89F97E311CCB3DFE00A2865C /* Assets.xcassets */,
@@ -403,8 +415,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899A2D311CCB7F9C0031371B /* TempDetailViewController.swift in Sources */,
 				899A2D041CCB5ABD0031371B /* HomeViewController.swift in Sources */,
+				899A2D371CCBD00B0031371B /* RGBDetailViewController.swift in Sources */,
+				899A2D331CCBB3B40031371B /* DoorDetailViewController.swift in Sources */,
 				89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */,
+				899A2D351CCBBB880031371B /* LightDetailViewController.swift in Sources */,
 				89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */,
 				8919D0C01CCB466A00BC86F1 /* FirebaseReference.swift in Sources */,
 				89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */,

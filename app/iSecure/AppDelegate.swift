@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate{
 
     var window: UIWindow?
 
@@ -17,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         registerForPushNotifications(application)
+        if WCSession.isSupported() {
+            let session = WCSession.defaultSession()
+            session.delegate = self // conforms to WCSessionDelegate
+            session.activateSession()
+        }
+        
         return true
     }
 
@@ -68,7 +75,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             forTypes: [.Badge, .Sound, .Alert], categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
     }
-
 
 }
 

@@ -6,6 +6,7 @@ target 'iSecure' do
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'EstimoteSDK'
   pod 'Firebase', '>= 2.5.1'
+  link_with 'iSecure', 'iSecure Watch Extension'
   pod 'Alamofire', '~> 3.3'
   pod 'Charts'
 end

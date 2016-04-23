@@ -9,6 +9,9 @@ import Firebase
 
 class FirebaseConnection {
     static let BASE_REF = Firebase(url: "https://isecurity.firebaseio.com")
-    static let SENSORS_REF = Firebase(url: "https://isecurity.firebaseio.com/sensors")
-    static let TEMP_REF = Firebase(url: "https://isecurity.firebaseio.com/sensors/tempature")
+    static let SENSORS_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors")
+    static let TEMP_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/Temp/Data")
+    static let DOOR_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/Door/Data")
+    static let LIGHT_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/DayLight/Data")
+    static let RGB_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/RGB/Data")
 }

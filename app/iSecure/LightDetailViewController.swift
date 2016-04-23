@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  LightDetailViewController.swift
 //  iSecure
 //
 //  Created by Russ Fenenga on 4/23/16.
@@ -9,19 +9,17 @@
 import UIKit
 
 
-class HomeViewController: UIViewController {
-
-    @IBOutlet weak var temperatureLabel: UILabel!
-
+class LightDetailViewController: UIViewController {
+    @IBOutlet weak var intensityLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseConnection.TEMP_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-            let stringValue = snapshot.value.objectForKey("test") as! String
-            if(stringValue != "nan"){
-                let value = (Float(stringValue)!)
-                print ("HomePageTemp: \(value)")
-                self.temperatureLabel.text = "\(value)"
-            }
+        self.navigationItem.title = "Light Intensity";
+        
+        FirebaseConnection.LIGHT_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+            let status = snapshot.value.objectForKey("value") as! String
+            print("LIGHT VALUE: \(status)")
+            self.intensityLabel.text = status
             }, withCancelBlock: { error in
                 print(error.description)
         })
@@ -30,10 +28,10 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        let handle = FirebaseConnection.TEMP_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
+        let handle = FirebaseConnection.LIGHT_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
             //print("Snapshot value: \(snapshot.value)")
         })
-        FirebaseConnection.TEMP_REF.removeObserverWithHandle(handle)
+        FirebaseConnection.LIGHT_REF.removeObserverWithHandle(handle)
     }
     
     override func didReceiveMemoryWarning() {

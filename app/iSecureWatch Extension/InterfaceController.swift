@@ -11,6 +11,7 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet var doorStatusLabel: WKInterfaceLabel!
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
