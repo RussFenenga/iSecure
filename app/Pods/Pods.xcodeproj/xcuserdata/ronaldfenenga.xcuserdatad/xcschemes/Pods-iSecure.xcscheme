@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FB27C4F86CB3F9043659E261'
+               BlueprintIdentifier = '9BE7D8426774E074F53EA1D3'
                BlueprintName = 'Pods-iSecure'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_iSecure.framework'>
