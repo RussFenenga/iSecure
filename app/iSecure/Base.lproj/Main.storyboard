@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Flir Images-->
@@ -14,11 +15,12 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Flir Images" image="first" id="acW-dT-cKf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,18 +35,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lZK-ys-pM7">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lZK-ys-pM7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lZK-ys-pM7" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="5aC-pi-Kdb"/>
-                            <constraint firstItem="lZK-ys-pM7" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="XUt-wf-tlW"/>
+                            <constraint firstItem="lZK-ys-pM7" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="-64" id="XUt-wf-tlW"/>
                             <constraint firstItem="lZK-ys-pM7" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="lKV-Bl-ZIU"/>
                             <constraint firstAttribute="trailing" secondItem="lZK-ys-pM7" secondAttribute="trailing" id="zis-2d-j4y"/>
                         </constraints>
@@ -63,6 +65,7 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -100,22 +103,51 @@
         <!--Home-->
         <scene sceneID="4oZ-me-qM6">
             <objects>
-                <viewController id="rTH-aM-QbE" sceneMemberID="viewController">
+                <viewController id="rTH-aM-QbE" customClass="HomeViewController" customModule="iSecure" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gvC-XV-8H9"/>
                         <viewControllerLayoutGuide type="bottom" id="T3B-BC-zEm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BlB-ou-VUk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-o1-0VL">
+                                <rect key="frame" x="242" y="79" width="67" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="FEG-t5-zcN"/>
+                                    <constraint firstAttribute="height" constant="29" id="oV4-Um-3mq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-nX-dx8">
+                                <rect key="frame" x="198" y="42" width="154" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WG9-o1-0VL" firstAttribute="top" secondItem="Fg6-nX-dx8" secondAttribute="bottom" constant="8" symbolic="YES" id="6Hm-ZZ-Ivb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WG9-o1-0VL" secondAttribute="trailing" constant="50" id="Eit-Lb-L8b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fg6-nX-dx8" secondAttribute="trailing" constant="7" id="avg-og-Osc"/>
+                            <constraint firstItem="Fg6-nX-dx8" firstAttribute="top" secondItem="gvC-XV-8H9" secondAttribute="bottom" constant="22" id="jBl-V8-kae"/>
+                            <constraint firstItem="T3B-BC-zEm" firstAttribute="top" secondItem="WG9-o1-0VL" secondAttribute="bottom" constant="510" id="jeg-Uu-WgS"/>
+                            <constraint firstItem="Fg6-nX-dx8" firstAttribute="centerX" secondItem="WG9-o1-0VL" secondAttribute="centerX" id="sFT-CT-Ox7"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="first" id="90q-5J-Mlw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="WG9-o1-0VL" id="MPT-5r-8n3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyf-zj-Bdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1287"/>
+            <point key="canvasLocation" x="749.5" y="1248.5"/>
         </scene>
     </scenes>
     <resources>

@@ -34,7 +34,7 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.sensorsTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        
+        cell.textLabel?.text = "Tempature"
         
         return cell
     }

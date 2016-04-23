@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8919D0C01CCB466A00BC86F1 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919D0BF1CCB466A00BC86F1 /* FirebaseReference.swift */; };
+		899A2D041CCB5ABD0031371B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D031CCB5ABD0031371B /* HomeViewController.swift */; };
 		89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E281CCB3DFE00A2865C /* AppDelegate.swift */; };
 		89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */; };
 		89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */; };
@@ -21,6 +22,7 @@
 		2A212D72407B5FBEEC180BB7 /* Pods-iSecure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSecure.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSecure/Pods-iSecure.release.xcconfig"; sourceTree = "<group>"; };
 		4F362DE990AACCE17E863910 /* Pods_iSecure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSecure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8919D0BF1CCB466A00BC86F1 /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		899A2D031CCB5ABD0031371B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89F97E251CCB3DFE00A2865C /* iSecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F97E281CCB3DFE00A2865C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlirImageViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */,
 				89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */,
 				89F97E2E1CCB3DFE00A2865C /* Main.storyboard */,
+				899A2D031CCB5ABD0031371B /* HomeViewController.swift */,
 				8919D0BF1CCB466A00BC86F1 /* FirebaseReference.swift */,
 				89F97E311CCB3DFE00A2865C /* Assets.xcassets */,
 				89F97E331CCB3DFE00A2865C /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899A2D041CCB5ABD0031371B /* HomeViewController.swift in Sources */,
 				89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */,
 				89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */,
 				8919D0C01CCB466A00BC86F1 /* FirebaseReference.swift in Sources */,
