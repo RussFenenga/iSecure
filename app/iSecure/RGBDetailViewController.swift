@@ -60,16 +60,15 @@ class RGBDetailViewController: UIViewController {
         self.view.backgroundColor = color
     }
     @IBAction func updateTapped(sender: AnyObject) {
-        let red = CGFloat(redSlider.value)
-        let blue = CGFloat(blueSlider.value)
-        let green = CGFloat(greenSlider.value)
-        let dictionary: [String:CGFloat] = [
+        let red = Int(redSlider.value)
+        let blue = Int(blueSlider.value)
+        let green = Int(greenSlider.value)
+        let dictionary: [String:Int] = [
             "red" : red,
             "green" : green,
             "blue" : blue
         ]
-        let ref = FirebaseConnection.RGB_REF.childByAutoId()
-        ref.setValue(dictionary)
+        FirebaseConnection.RGB_REF.setValue(dictionary)
     }
     
     override func viewDidLoad() {

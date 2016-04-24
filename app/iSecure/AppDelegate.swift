@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, ESTBea
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         registerForPushNotifications(application)
+
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         if WCSession.isSupported() {
             let session = WCSession.defaultSession()
@@ -90,6 +91,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, ESTBea
             let ref = FirebaseConnection.BEACON_REF.childByAutoId()
             ref.setValue(dictionary)
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+            let entered: [String:Int] = [
+                "red" : 255,
+                "green" : 255,
+                "blue" : 255
+            ]
+            FirebaseConnection.RGB_REF.setValue(entered)
             self.beaconManager.startRangingBeaconsInRegion(beaconRegion)
         }
     }
@@ -117,6 +124,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, ESTBea
             ref.setValue(dictionary)
             
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+            let exited: [String:Int] = [
+                "red" : 0,
+                "green" : 0,
+                "blue" : 0
+            ]
+            FirebaseConnection.RGB_REF.setValue(exited)
             self.beaconManager.startRangingBeaconsInRegion(beaconRegion)
         }
     }

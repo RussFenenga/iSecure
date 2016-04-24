@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Flir Images" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Flir Images" image="flame" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -323,7 +323,7 @@
         <scene sceneID="ynp-sk-uCr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z60-Z6-vlE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sensors" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Sensors" image="sensors" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4j-it-jki">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -350,36 +350,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-nX-dx8">
-                                <rect key="frame" x="202" y="42" width="154" height="29"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-o1-0VL">
-                                <rect key="frame" x="227" y="79" width="104" height="29"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMD-mI-aAq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-NH-Yli">
+                                        <rect key="frame" x="0.0" y="523" width="375" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ww-gA-xtS">
+                                                <rect key="frame" x="231" y="23" width="136" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="136" id="cxL-wS-6uk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                <state key="normal" title="Alarm Off">
+                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressAlarmButton:" destination="rTH-aM-QbE" eventType="touchUpInside" id="eCp-td-BdM"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-o1-0VL">
+                                                <rect key="frame" x="137" y="30" width="100" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="FEG-t5-zcN"/>
+                                                    <constraint firstAttribute="height" constant="29" id="oV4-Um-3mq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcL-td-YRC">
+                                                <rect key="frame" x="39" y="28" width="90" height="31"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="1ww-gA-xtS" firstAttribute="top" secondItem="MmX-NH-Yli" secondAttribute="top" constant="23" id="2XB-eo-Tuz"/>
+                                            <constraint firstItem="1ww-gA-xtS" firstAttribute="centerY" secondItem="MmX-NH-Yli" secondAttribute="centerY" id="BoN-0J-FqJ"/>
+                                            <constraint firstItem="1ww-gA-xtS" firstAttribute="trailing" secondItem="MmX-NH-Yli" secondAttribute="trailingMargin" id="NqD-46-p1H"/>
+                                            <constraint firstItem="WG9-o1-0VL" firstAttribute="baseline" secondItem="1ww-gA-xtS" secondAttribute="baseline" id="rHm-tA-ql0"/>
+                                            <constraint firstItem="WG9-o1-0VL" firstAttribute="centerX" secondItem="MmX-NH-Yli" secondAttribute="centerX" id="yP0-w8-0JJ"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="KPt-HA-f7g">
+                                        <rect key="frame" x="53" y="85" width="269" height="268"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.63529411764705879" blue="0.75444068869324044" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="FEG-t5-zcN"/>
-                                    <constraint firstAttribute="height" constant="29" id="oV4-Um-3mq"/>
+                                    <constraint firstItem="MmX-NH-Yli" firstAttribute="bottom" secondItem="JMD-mI-aAq" secondAttribute="bottomMargin" id="Xa2-1p-VLK"/>
+                                    <constraint firstAttribute="trailing" secondItem="MmX-NH-Yli" secondAttribute="trailing" id="YO0-Oy-U5I"/>
+                                    <constraint firstItem="MmX-NH-Yli" firstAttribute="leading" secondItem="JMD-mI-aAq" secondAttribute="leading" id="be3-fm-GTG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WG9-o1-0VL" firstAttribute="top" secondItem="Fg6-nX-dx8" secondAttribute="bottom" constant="8" symbolic="YES" id="6Hm-ZZ-Ivb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WG9-o1-0VL" secondAttribute="trailing" constant="28" id="Eit-Lb-L8b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fg6-nX-dx8" secondAttribute="trailing" constant="3" id="avg-og-Osc"/>
-                            <constraint firstItem="Fg6-nX-dx8" firstAttribute="top" secondItem="gvC-XV-8H9" secondAttribute="bottom" constant="22" id="jBl-V8-kae"/>
-                            <constraint firstItem="T3B-BC-zEm" firstAttribute="top" secondItem="WG9-o1-0VL" secondAttribute="bottom" constant="510" id="jeg-Uu-WgS"/>
-                            <constraint firstItem="Fg6-nX-dx8" firstAttribute="centerX" secondItem="WG9-o1-0VL" secondAttribute="centerX" id="sFT-CT-Ox7"/>
+                            <constraint firstItem="JMD-mI-aAq" firstAttribute="top" secondItem="BlB-ou-VUk" secondAttribute="top" id="2cD-Lv-And"/>
+                            <constraint firstItem="JMD-mI-aAq" firstAttribute="leading" secondItem="BlB-ou-VUk" secondAttribute="leading" id="wT3-NC-eGe"/>
+                            <constraint firstItem="JMD-mI-aAq" firstAttribute="bottom" secondItem="T3B-BC-zEm" secondAttribute="top" id="y08-Jq-y4b"/>
+                            <constraint firstAttribute="trailing" secondItem="JMD-mI-aAq" secondAttribute="trailing" id="zwt-y4-yft"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="90q-5J-Mlw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="alarmButton" destination="1ww-gA-xtS" id="K9l-qp-vBW"/>
+                        <outlet property="doorStatusLabel" destination="wcL-td-YRC" id="wxZ-zu-SWM"/>
                         <outlet property="temperatureLabel" destination="WG9-o1-0VL" id="MPT-5r-8n3"/>
                     </connections>
                 </viewController>
@@ -389,7 +428,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="flame" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
+        <image name="lock" width="1024" height="1024"/>
+        <image name="sensors" width="30" height="30"/>
     </resources>
 </document>
