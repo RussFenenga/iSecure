@@ -22,6 +22,7 @@
 		899A2D331CCBB3B40031371B /* DoorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D321CCBB3B30031371B /* DoorDetailViewController.swift */; };
 		899A2D351CCBBB880031371B /* LightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D341CCBBB880031371B /* LightDetailViewController.swift */; };
 		899A2D371CCBD00B0031371B /* RGBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */; };
+		899A2D391CCC5C740031371B /* MotionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D381CCC5C740031371B /* MotionDetailViewController.swift */; };
 		89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E281CCB3DFE00A2865C /* AppDelegate.swift */; };
 		89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */; };
 		89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */; };
@@ -94,6 +95,8 @@
 		899A2D321CCBB3B30031371B /* DoorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorDetailViewController.swift; sourceTree = "<group>"; };
 		899A2D341CCBBB880031371B /* LightDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightDetailViewController.swift; sourceTree = "<group>"; };
 		899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBDetailViewController.swift; sourceTree = "<group>"; };
+		899A2D381CCC5C740031371B /* MotionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetailViewController.swift; sourceTree = "<group>"; };
+		899A2D3A1CCC74F60031371B /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		89F97E251CCB3DFE00A2865C /* iSecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F97E281CCB3DFE00A2865C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlirImageViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 				89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */,
 				89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */,
 				89F97E2E1CCB3DFE00A2865C /* Main.storyboard */,
+				899A2D381CCC5C740031371B /* MotionDetailViewController.swift */,
 				899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */,
 				899A2D341CCBBB880031371B /* LightDetailViewController.swift */,
 				899A2D321CCBB3B30031371B /* DoorDetailViewController.swift */,
@@ -203,6 +207,7 @@
 				89F97E311CCB3DFE00A2865C /* Assets.xcassets */,
 				89F97E331CCB3DFE00A2865C /* LaunchScreen.storyboard */,
 				89F97E361CCB3DFE00A2865C /* Info.plist */,
+				899A2D3A1CCC74F60031371B /* ObjCBridge.h */,
 			);
 			path = iSecure;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				899A2D331CCBB3B40031371B /* DoorDetailViewController.swift in Sources */,
 				89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */,
 				899A2D351CCBBB880031371B /* LightDetailViewController.swift in Sources */,
+				899A2D391CCC5C740031371B /* MotionDetailViewController.swift in Sources */,
 				89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */,
 				8919D0C01CCB466A00BC86F1 /* FirebaseReference.swift in Sources */,
 				89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */,
@@ -622,6 +628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TeamWon.iSecure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Debug;
 		};
@@ -634,6 +641,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TeamWon.iSecure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Release;
 		};
@@ -647,6 +655,7 @@
 				899A2D2B1CCB68590031371B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		899A2D2E1CCB68590031371B /* Build configuration list for PBXNativeTarget "iSecureWatch" */ = {
 			isa = XCConfigurationList;
@@ -655,6 +664,7 @@
 				899A2D291CCB68590031371B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89F97E201CCB3DFE00A2865C /* Build configuration list for PBXProject "iSecure" */ = {
 			isa = XCConfigurationList;

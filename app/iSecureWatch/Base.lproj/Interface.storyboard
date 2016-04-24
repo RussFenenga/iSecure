@@ -10,8 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iSecureWatch" customModuleProvider="target">
                     <items>
-                        <label width="134" height="36.5" alignment="left" text="Label" textAlignment="center" id="Ke6-Rd-iWv"/>
-                        <button width="1" alignment="left" title="Alarm" id="ge4-pi-h2c"/>
+                        <label width="136" height="97.5" alignment="left" text="Status" textAlignment="center" id="Ke6-Rd-iWv"/>
+                        <button width="1" alignment="left" title="Alarm" id="ge4-pi-h2c">
+                            <connections>
+                                <action selector="AlarmButtonPressed" destination="AgC-eL-Hgc" id="zHO-MS-lR1"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="doorStatusLabel" destination="Ke6-Rd-iWv" id="cZ8-7T-MAe"/>
@@ -25,8 +29,17 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="iSecureWatch" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="136" height="50.5" alignment="left" text="Temperature" id="NFb-HT-FPR"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" text="Door Status: " id="a4E-4M-tec"/>
+                                <label alignment="left" text="Label" id="4n8-Cq-Ulx"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>

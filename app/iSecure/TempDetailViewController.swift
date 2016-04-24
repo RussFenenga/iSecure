@@ -20,7 +20,7 @@ class SensorDetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let count = 0
         FirebaseConnection.TEMP_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-            let stringValue = snapshot.value.objectForKey("test") as! String
+            let stringValue = snapshot.value.objectForKey("value") as! String
             if(stringValue != "nan"){
                 let value = (Double(stringValue)!)
                // print ("VALUE: \(value)")

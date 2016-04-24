@@ -31,7 +31,7 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = self.sensorsTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
@@ -47,6 +47,10 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
             break
         case 3:
             cell.textLabel?.text = "Lights"
+            break
+        case 4:
+            cell.textLabel?.text = "Motion Sensor"
+            break
         default:
             break
         }
@@ -69,6 +73,8 @@ class SensorsViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 3:
             self.performSegueWithIdentifier("didSelectRGB", sender: UITableViewCell())
             break
+        case 4:
+            self.performSegueWithIdentifier("didSelectMotion", sender: UITableViewCell())
         default:
             break
         }

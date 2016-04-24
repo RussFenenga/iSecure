@@ -58,11 +58,46 @@
                         <segue destination="QCL-6g-at9" kind="show" identifier="didSelectDoor" id="Xil-nx-MXS"/>
                         <segue destination="s1Q-04-9Sd" kind="show" identifier="didSelectLight" id="Hu9-a8-kjZ"/>
                         <segue destination="00r-Sh-34l" kind="show" identifier="didSelectRGB" id="pjF-3W-Xvc"/>
+                        <segue destination="ufb-aF-NAM" kind="show" identifier="didSelectMotion" id="dog-W5-hSy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="360"/>
+        </scene>
+        <!--Motion Detail View Controller-->
+        <scene sceneID="xzK-ON-VXf">
+            <objects>
+                <viewController id="ufb-aF-NAM" customClass="MotionDetailViewController" customModule="iSecure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HOm-LN-572"/>
+                        <viewControllerLayoutGuide type="bottom" id="M6E-Kf-8vr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XsT-na-fNA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triggered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-mm-Vze">
+                                <rect key="frame" x="150" y="318" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XXo-mm-Vze" firstAttribute="centerX" secondItem="XsT-na-fNA" secondAttribute="centerX" id="k43-u4-OuU"/>
+                            <constraint firstItem="XXo-mm-Vze" firstAttribute="top" secondItem="HOm-LN-572" secondAttribute="bottom" constant="254" id="r8w-Ft-w1k"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="motionSensor" destination="XXo-mm-Vze" id="33O-Pd-1YY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZw-Aj-Gto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719.5" y="1417.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="qDt-Gd-FVc">
@@ -167,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOV-fo-MJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561.5" y="-632.5"/>
+            <point key="canvasLocation" x="2057.5" y="-668.5"/>
         </scene>
         <!--Light Detail View Controller-->
         <scene sceneID="qaX-2F-lmN">
@@ -197,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69a-hn-d3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2101.5" y="-463.5"/>
+            <point key="canvasLocation" x="2721.5" y="-687.5"/>
         </scene>
         <!--Sensor Detail View Controller-->
         <scene sceneID="GF9-cr-0Eu">
@@ -231,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4q-JP-kV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2101.5" y="359.5"/>
+            <point key="canvasLocation" x="2721.5" y="347.5"/>
         </scene>
         <!--Door Detail View Controller-->
         <scene sceneID="16o-VV-CDH">
@@ -261,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzo-Ip-1My" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2101.5" y="1192.5"/>
+            <point key="canvasLocation" x="2721.5" y="1424.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseConnection.TEMP_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
-            let stringValue = snapshot.value.objectForKey("test") as! String
+            let stringValue = snapshot.value.objectForKey("value") as! String
             if(stringValue != "nan"){
                 let value = (Float(stringValue)!)
                 print ("HomePageTemp: \(value)")
