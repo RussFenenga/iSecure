@@ -362,7 +362,7 @@
                                                     <constraint firstAttribute="width" constant="136" id="cxL-wS-6uk"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
-                                                <state key="normal" title="Alarm Off">
+                                                <state key="normal" title="Label">
                                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -424,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyf-zj-Bdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.5" y="1248.5"/>
+            <point key="canvasLocation" x="-0.5" y="1136.5"/>
         </scene>
     </scenes>
     <resources>

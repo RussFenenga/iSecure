@@ -16,6 +16,6 @@ class FirebaseConnection {
     static let RGB_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/RGB")
     static let DEVICE_REF = Firebase(url: "https://isecurity.firebaseio.com/Devices")
     static let MOTION_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/Motion/Data")
-    static let BUZZER_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/buzzer/value")
+    static let BUZZER_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/buzzer")
     static let BEACON_REF = Firebase(url: "https://isecurity.firebaseio.com/Sensors/beacons/data")
 }

@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     FirebaseConnection.DOOR_REF.observeEventType(.ChildAdded, withBlock: { snapshot in
             let status = snapshot.value.objectForKey("test") as! String
             if(status == "open"){
@@ -30,12 +31,13 @@ class HomeViewController: UIViewController {
         })
         
         FirebaseConnection.BUZZER_REF.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
-            if(snapshot.value as! Int == 1){
-                self.alarmButton.titleLabel?.textColor = UIColor.redColor()
-                self.alarmButton.titleLabel?.text = "Turn Off"
+            print(snapshot.value.objectForKey("value") as! Int )
+            if(snapshot.value.objectForKey("value") as! Int == 1){
+                self.alarmButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+                self.alarmButton.setTitle("Turn Off", forState: .Normal)
             } else {
-                self.alarmButton.titleLabel?.textColor = UIColor.greenColor()
+                self.alarmButton.setTitleColor(UIColor.greenColor(), forState: .Normal)
+                self.alarmButton.setTitle("Alarm Off", forState: .Normal)
             }
             }, withCancelBlock: { error in
                 print(error.description)
@@ -63,7 +65,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didPressAlarmButton(sender: AnyObject) {
-        FirebaseConnection.BUZZER_REF.setValue(0)
+        FirebaseConnection.BUZZER_REF.childByAppendingPath("value").setValue(0)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
