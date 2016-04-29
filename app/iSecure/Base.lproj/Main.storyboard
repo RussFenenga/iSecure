@@ -6,26 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Flir Images-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" customClass="FlirImageViewController" customModule="iSecure" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Flir Images" image="flame" id="acW-dT-cKf"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="-404"/>
-        </scene>
         <!--Sensors View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -59,6 +39,7 @@
                         <segue destination="s1Q-04-9Sd" kind="show" identifier="didSelectLight" id="Hu9-a8-kjZ"/>
                         <segue destination="00r-Sh-34l" kind="show" identifier="didSelectRGB" id="pjF-3W-Xvc"/>
                         <segue destination="ufb-aF-NAM" kind="show" identifier="didSelectMotion" id="dog-W5-hSy"/>
+                        <segue destination="wtJ-Sx-Ff6" kind="show" identifier="didSelectHumidity" id="H4h-Xc-Vcw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -77,9 +58,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triggered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-mm-Vze">
-                                <rect key="frame" x="150" y="318" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Triggered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-mm-Vze">
+                                <rect key="frame" x="76" y="271" width="223.5" height="66.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="56"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,7 +68,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XXo-mm-Vze" firstAttribute="centerX" secondItem="XsT-na-fNA" secondAttribute="centerX" id="k43-u4-OuU"/>
-                            <constraint firstItem="XXo-mm-Vze" firstAttribute="top" secondItem="HOm-LN-572" secondAttribute="bottom" constant="254" id="r8w-Ft-w1k"/>
+                            <constraint firstItem="XXo-mm-Vze" firstAttribute="top" secondItem="HOm-LN-572" secondAttribute="bottom" constant="207" id="r8w-Ft-w1k"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -204,6 +185,34 @@
             </objects>
             <point key="canvasLocation" x="2057.5" y="-668.5"/>
         </scene>
+        <!--Humidity Detail View Controller-->
+        <scene sceneID="kKR-fk-3tq">
+            <objects>
+                <viewController id="wtJ-Sx-Ff6" customClass="HumidityDetailViewController" customModule="iSecure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Jf-4L-qQv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ywy-06-s9T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MXH-II-SpW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sn-dQ-V0G" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="375" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lineChart" destination="2sn-dQ-V0G" id="y45-cN-VUs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tP-9d-7tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561.5" y="-414.5"/>
+        </scene>
         <!--Light Detail View Controller-->
         <scene sceneID="qaX-2F-lmN">
             <objects>
@@ -311,7 +320,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="rTH-aM-QbE" kind="relationship" relationship="viewControllers" id="mRc-cM-srX"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="z60-Z6-vlE" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
@@ -393,8 +401,18 @@
                                             <constraint firstItem="WG9-o1-0VL" firstAttribute="centerX" secondItem="MmX-NH-Yli" secondAttribute="centerX" id="yP0-w8-0JJ"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="KPt-HA-f7g">
-                                        <rect key="frame" x="53" y="85" width="269" height="268"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="KPt-HA-f7g" customClass="SpringImageView" customModule="Spring">
+                                        <rect key="frame" x="53" y="86" width="269" height="268"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.63529411764705879" blue="0.75444068869324044" alpha="1" colorSpace="calibratedRGB"/>
@@ -428,7 +446,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="flame" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="lock" width="1024" height="1024"/>
         <image name="sensors" width="30" height="30"/>

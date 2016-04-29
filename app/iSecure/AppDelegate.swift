@@ -94,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, ESTBea
             let entered: [String:Int] = [
                 "red" : 255,
                 "green" : 255,
-                "blue" : 255
+                "blue" : 150
             ]
             FirebaseConnection.RGB_REF.setValue(entered)
             self.beaconManager.startRangingBeaconsInRegion(beaconRegion)

@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31FBFD1A9F53F4B20E0A48FB59E42CD4</key>
+		<key>2BD84EE2140C8FC03623CD9523DA918C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B41DA5AB709D85840DD6B233939FE31</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8AA74BD30FFDA30A70502363385BCB8</key>
+		<key>B7AC9326D819482593FE118E915409D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7AC9326D819482593FE118E915409D7</key>
+		<key>BA048D5574FCDE62358BFDDF4F43951C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

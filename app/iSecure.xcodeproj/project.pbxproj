@@ -23,6 +23,7 @@
 		899A2D351CCBBB880031371B /* LightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D341CCBBB880031371B /* LightDetailViewController.swift */; };
 		899A2D371CCBD00B0031371B /* RGBDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */; };
 		899A2D391CCC5C740031371B /* MotionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D381CCC5C740031371B /* MotionDetailViewController.swift */; };
+		899A2D3F1CCCFEFE0031371B /* HumidityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A2D3E1CCCFEFE0031371B /* HumidityDetailViewController.swift */; };
 		89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E281CCB3DFE00A2865C /* AppDelegate.swift */; };
 		89F97E2B1CCB3DFE00A2865C /* FlirImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */; };
 		89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */; };
@@ -97,6 +98,7 @@
 		899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBDetailViewController.swift; sourceTree = "<group>"; };
 		899A2D381CCC5C740031371B /* MotionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetailViewController.swift; sourceTree = "<group>"; };
 		899A2D3A1CCC74F60031371B /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		899A2D3E1CCCFEFE0031371B /* HumidityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumidityDetailViewController.swift; sourceTree = "<group>"; };
 		89F97E251CCB3DFE00A2865C /* iSecure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSecure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F97E281CCB3DFE00A2865C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlirImageViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				89F97E2A1CCB3DFE00A2865C /* FlirImageViewController.swift */,
 				89F97E2C1CCB3DFE00A2865C /* SensorsViewController.swift */,
 				89F97E2E1CCB3DFE00A2865C /* Main.storyboard */,
+				899A2D3E1CCCFEFE0031371B /* HumidityDetailViewController.swift */,
 				899A2D381CCC5C740031371B /* MotionDetailViewController.swift */,
 				899A2D361CCBD00B0031371B /* RGBDetailViewController.swift */,
 				899A2D341CCBBB880031371B /* LightDetailViewController.swift */,
@@ -425,6 +428,7 @@
 				899A2D371CCBD00B0031371B /* RGBDetailViewController.swift in Sources */,
 				899A2D331CCBB3B40031371B /* DoorDetailViewController.swift in Sources */,
 				89F97E2D1CCB3DFE00A2865C /* SensorsViewController.swift in Sources */,
+				899A2D3F1CCCFEFE0031371B /* HumidityDetailViewController.swift in Sources */,
 				899A2D351CCBBB880031371B /* LightDetailViewController.swift in Sources */,
 				899A2D391CCC5C740031371B /* MotionDetailViewController.swift in Sources */,
 				89F97E291CCB3DFE00A2865C /* AppDelegate.swift in Sources */,

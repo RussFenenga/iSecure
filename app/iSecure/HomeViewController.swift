@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
             } else if (status == "closed"){
                 self.doorStatusLabel.text = "Closed"
             }
-            print(status)
+            //print(status)
             }, withCancelBlock: { error in
                 print(error.description)
         })
@@ -47,8 +47,8 @@ class HomeViewController: UIViewController {
            let stringValue = snapshot.value.objectForKey("value") as? String
             if(stringValue != "nan"){
                 let value = (Float(stringValue!)!)
-                print ("HomePageTemp: \(value)")
-                self.temperatureLabel.text = "\(value)"
+                //print ("HomePageTemp: \(value)")
+                self.temperatureLabel.text = "\(value)F"
             }
             }, withCancelBlock: { error in
                 print(error.description)

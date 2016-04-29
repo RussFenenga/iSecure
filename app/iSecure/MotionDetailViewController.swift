@@ -18,7 +18,7 @@ class MotionDetailViewController: UIViewController {
             let status = snapshot.value.objectForKey("I'm") as! String
             if(status == "triggered"){
                 self.motionSensor.text = "Triggered"
-            } else if (status == "closed"){
+            } else if (status == "safe"){
                 self.motionSensor.text = "Safe"
             }
             print(status)

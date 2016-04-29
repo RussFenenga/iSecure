@@ -88,6 +88,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-iSecure/Alamofire.framework"
   install_framework "Pods-iSecure/Charts.framework"
   install_framework "Pods-iSecure/Firebase.framework"
+  install_framework "Pods-iSecure/Spring.framework"
   install_framework "Pods-iSecure/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -95,5 +96,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iSecure/Alamofire.framework"
   install_framework "Pods-iSecure/Charts.framework"
   install_framework "Pods-iSecure/Firebase.framework"
+  install_framework "Pods-iSecure/Spring.framework"
   install_framework "Pods-iSecure/SwiftyJSON.framework"
 fi

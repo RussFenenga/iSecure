@@ -23,7 +23,6 @@ class DoorDetailViewController: UIViewController {
             } else if (status == "closed"){
                 self.statusLabel.text = "Closed"
             }
-                print(status)
             }, withCancelBlock: { error in
                 print(error.description)
         })

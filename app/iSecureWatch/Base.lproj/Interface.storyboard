@@ -10,12 +10,13 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iSecureWatch" customModuleProvider="target">
                     <items>
-                        <label width="136" height="97.5" alignment="left" text="Status" textAlignment="center" id="Ke6-Rd-iWv"/>
+                        <label width="136" height="70.5" alignment="left" text="Status" textAlignment="center" id="Ke6-Rd-iWv"/>
                         <button width="1" alignment="left" title="Alarm" id="ge4-pi-h2c">
                             <connections>
                                 <action selector="AlarmButtonPressed" destination="AgC-eL-Hgc" id="zHO-MS-lR1"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Button" id="Y6H-dZ-4wE"/>
                     </items>
                     <connections>
                         <outlet property="doorStatusLabel" destination="Ke6-Rd-iWv" id="cZ8-7T-MAe"/>
